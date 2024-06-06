@@ -106,6 +106,11 @@ class UserModel extends Model
 	$user->delete(['id' => 1]);
 ```
 
+* Get Table (retorna a tabela setada na model)
+```bash
+	$user->getTable();
+```
+
 * QUERY (literalmente passa uma query)
 ```bash
 	$user->sql('SELECT * FROM usuarios');
