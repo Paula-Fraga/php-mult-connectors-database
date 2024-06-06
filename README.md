@@ -55,7 +55,7 @@ define('RETURN_BD', 'ARRAY'); // ARRAY / OBJECT
 	* ARRAY: Retorna como um array associativo.
 	* OBJECT: Retorna como um objeto.
 
-**Criando um Model:**
+## Model
 
 **Para criar um model, acesse o diretório app/database/Models. Crie um novo arquivo PHP e defina a classe do seu model, extendendo a classe Model e setando o nome da tabela na variável $table:**
 
