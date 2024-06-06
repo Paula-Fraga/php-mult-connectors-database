@@ -11,7 +11,7 @@ require '../define.php';
 
 	$user->insert([
 		'nome' => 'Adm',
-		'email' => 'usu4ar2io@gmail.com',
+		'email' => 'usuario@gmail.com',
 		'senha' => '12345',
 	]);
 

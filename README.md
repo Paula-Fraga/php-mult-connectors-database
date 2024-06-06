@@ -77,6 +77,55 @@ class UserModel extends Model
 * Substitua usuarios pelo nome real da sua tabela.
 * Você pode criar quantos models forem necessários, seguindo a mesma estrutura.
 
+## CRUD
+**Neste sistema, ao instanciar o model, poderá realizar as consultas da seguinte maneira:**
+
+* SELECT
+```bash
+	$user = new UserModel;
+	$user->select();
+```
+
+* INSERT (passa os dados a serem preenchidos)
+```bash
+	$user = new UserModel;
+	$user->insert([
+		'nome' => 'Adm',
+		'email' => 'usuario@gmail.com',
+		'senha' => '12345',
+	]);
+```
+
+* UPDATE (passa os dados a serem atualizados e a condição)
+```bash
+	$user->update(['nome' => 'Supervisor'], ['id' => 1]);
+```
+
+* DELETE (passa uma condição para o delete)
+```bash
+	$user->delete(['id' => 1]);
+```
+
+* QUERY (literalmente passa uma query)
+```bash
+	$user->sql('SELECT * FROM usuarios');
+```
+
+**Observações:**
+* INSERT, SELECT, UPDATE e DELETE está disponível apenas para banco de dados pgsql, sqlsrv ou mysql, setados em:
+```bash
+define('DB_CONNECTION', 'mysql'); 
+define('DB_HOST', 'localhost');
+define('DB_PORT', 3306);
+define('DB_DATABASE', 'db_teste');
+define('DB_USERNAME', 'usuario');
+define('DB_PASSWORD', 'senha');
+```
+* Para demais bancos, as querys terão de ser resolvidas na função sql;
+```bash
+	$user->sql('SELECT * FROM usuarios');
+```
+
 ---
 ## Considerações Finais
 
