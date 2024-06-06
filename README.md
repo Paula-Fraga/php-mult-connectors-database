@@ -80,13 +80,13 @@ class UserModel extends Model
 ## CRUD
 **Neste sistema, ao instanciar o model, poderá realizar as consultas da seguinte maneira:**
 
-* SELECT
+* SELECT (retorna dados da tabela)
 ```bash
 	$user = new UserModel;
 	$user->select();
 ```
 
-* INSERT (passa os dados a serem preenchidos)
+* INSERT (passa os dados a serem preenchidos) (retorna o id inserido)
 ```bash
 	$user = new UserModel;
 	$user->insert([
@@ -96,12 +96,12 @@ class UserModel extends Model
 	]);
 ```
 
-* UPDATE (passa os dados a serem atualizados e a condição)
+* UPDATE (passa os dados a serem atualizados e a condição) (retorna a quantidade de linhas afetadas)
 ```bash
 	$user->update(['nome' => 'Supervisor'], ['id' => 1]);
 ```
 
-* DELETE (passa uma condição para o delete)
+* DELETE (passa uma condição para o delete) (retorna a quantidade de linhas afetadas)
 ```bash
 	$user->delete(['id' => 1]);
 ```
