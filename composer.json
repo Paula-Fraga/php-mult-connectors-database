@@ -1,0 +1,16 @@
+{
+    "name": "paula/php-mult-connectors-database",
+	"version": "1.0.0",
+    "authors": [
+        {
+            "name": "Paula Fraga",
+            "email": "pauladev3@gmail.com"
+        }
+    ],
+    "require": {},
+	"autoload": {
+		"psr-4": {
+			"app\\": "app"
+		}
+	}
+}
